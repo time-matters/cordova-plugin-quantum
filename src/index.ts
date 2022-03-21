@@ -35,7 +35,7 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   }
 
   @Cordova()
-  connect(): Promise<string> {
+  connect(): Promise<any> {
     return;
   }
 

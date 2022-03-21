@@ -18,7 +18,7 @@ export declare enum SUPPORTED_DEVICE_TYPES {
 }
 export declare class Quantum extends AwesomeCordovaNativePlugin {
     setDeveloperKey(key: string): Promise<any>;
-    connect(): Promise<string>;
+    connect(): Promise<any>;
     disconnect(): Promise<string>;
     sdkVersion(): Promise<string>;
     connectionState(state: number): Promise<CONN_STATES>;
