@@ -30,7 +30,9 @@ export enum SUPPORTED_DEVICE_TYPES {
 @Injectable()
 export class Quantum extends AwesomeCordovaNativePlugin {
   @Cordova()
-  setDeveloperKey(key: string): void { }
+  setDeveloperKey(key: string): Promise<any> {
+    return;
+  }
 
   @Cordova()
   connect(): Promise<string> {

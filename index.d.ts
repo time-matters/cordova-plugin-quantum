@@ -17,7 +17,7 @@ export declare enum SUPPORTED_DEVICE_TYPES {
     DEVICE_TYPE_HID_KEYBOARD = 8
 }
 export declare class QuantumOriginal extends AwesomeCordovaNativePlugin {
-    setDeveloperKey(key: string): void;
+    setDeveloperKey(key: string): Promise<any>;
     connect(): Promise<string>;
     disconnect(): Promise<string>;
     sdkVersion(): Promise<string>;
