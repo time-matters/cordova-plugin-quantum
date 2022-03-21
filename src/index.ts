@@ -23,8 +23,9 @@ export enum SUPPORTED_DEVICE_TYPES {
 @Plugin({
   pluginName: 'Quantum',
   plugin: 'cordova-plugin-quantumsdk',
-  pluginRef: 'cordova.plugins.quantum',
-  repo: 'https://github.com/time-matters/cordova-plugin-quantum',
+  pluginRef: 'Quantum',
+  repo: 'https://github.com/time-matters/QuantumSDK-Cordova.git',
+  install: 'ionic cordova plugin add cordova-plugin-quantumsdk',
   platforms: ['iOS'],
 })
 @Injectable()

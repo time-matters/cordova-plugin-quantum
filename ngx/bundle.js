@@ -40,8 +40,9 @@ var Quantum = /** @class */ (function (_super) {
     Quantum.prototype.getConnectedDeviceInfo = function (deviceType) { return core.cordova(this, "getConnectedDeviceInfo", {}, arguments); };
     Quantum.pluginName = "Quantum";
     Quantum.plugin = "cordova-plugin-quantumsdk";
-    Quantum.pluginRef = "cordova.plugins.quantum";
-    Quantum.repo = "https://github.com/time-matters/cordova-plugin-quantum";
+    Quantum.pluginRef = "Quantum";
+    Quantum.repo = "https://github.com/time-matters/QuantumSDK-Cordova.git";
+    Quantum.install = "ionic cordova plugin add cordova-plugin-quantumsdk";
     Quantum.platforms = ["iOS"];
     Quantum.decorators = [
         { type: core$1.Injectable }
