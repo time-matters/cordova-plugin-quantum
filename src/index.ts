@@ -22,7 +22,7 @@ export enum SUPPORTED_DEVICE_TYPES {
 
 @Plugin({
   pluginName: 'Quantum',
-  plugin: 'cordova-plugin-quantum',
+  plugin: 'cordova-plugin-quantumsdk',
   pluginRef: 'cordova.plugins.quantum',
   repo: 'https://github.com/time-matters/cordova-plugin-quantum',
   platforms: ['iOS'],
@@ -30,9 +30,7 @@ export enum SUPPORTED_DEVICE_TYPES {
 @Injectable()
 export class Quantum extends AwesomeCordovaNativePlugin {
   @Cordova()
-  setDeveloperKey(key: string): Promise<any> {
-    return;
-  }
+  setDeveloperKey(key: string): void { }
 
   @Cordova()
   connect(): Promise<any> {
