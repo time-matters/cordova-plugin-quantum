@@ -20,6 +20,11 @@ export enum SUPPORTED_DEVICE_TYPES {
   DEVICE_TYPE_HID_KEYBOARD = 8
 }
 
+export interface BarcodeData {
+  barcode: string
+  type: number
+}
+
 @Plugin({
   pluginName: 'Quantum',
   plugin: 'cordova-plugin-quantumsdk',
@@ -34,14 +39,10 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   setDeveloperKey(key: string): void { }
 
   @Cordova()
-  connect(): Promise<any> {
-    return;
-  }
+  connect(): void { }
 
   @Cordova()
-  disconnect(): Promise<string> {
-    return;
-  }
+  disconnect(): void { }
 
   @Cordova()
   sdkVersion(): Promise<string> {
@@ -49,12 +50,12 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   }
 
   @Cordova()
-  connectionState(state: number): Promise<CONN_STATES> {
+  connectionState(): Promise<CONN_STATES> {
     return;
   }
 
   @Cordova()
-  barcodeData(barcode: string, type: number): Promise<string> {
+  barcodeData(): Promise<BarcodeData> {
     return;
   }
 
@@ -64,7 +65,12 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   }
 
   @Cordova()
-  getConnectedDeviceInfo(deviceType: number[]): Promise<SUPPORTED_DEVICE_TYPES> {
+  getConnectedDeviceInfo(): Promise<SUPPORTED_DEVICE_TYPES> {
+    return;
+  }
+
+  @Cordova()
+  getBatteryInfo(): Promise<any> {
     return;
   }
 }

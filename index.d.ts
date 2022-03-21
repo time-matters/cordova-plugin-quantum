@@ -16,15 +16,20 @@ export declare enum SUPPORTED_DEVICE_TYPES {
     DEVICE_TYPE_USB_MSR = 7,
     DEVICE_TYPE_HID_KEYBOARD = 8
 }
+export interface BarcodeData {
+    barcode: string;
+    type: number;
+}
 export declare class QuantumOriginal extends AwesomeCordovaNativePlugin {
     setDeveloperKey(key: string): void;
-    connect(): Promise<any>;
-    disconnect(): Promise<string>;
+    connect(): void;
+    disconnect(): void;
     sdkVersion(): Promise<string>;
-    connectionState(state: number): Promise<CONN_STATES>;
-    barcodeData(barcode: string, type: number): Promise<string>;
+    connectionState(): Promise<CONN_STATES>;
+    barcodeData(): Promise<BarcodeData>;
     playSound(beepData: number[]): Promise<any>;
-    getConnectedDeviceInfo(deviceType: number[]): Promise<SUPPORTED_DEVICE_TYPES>;
+    getConnectedDeviceInfo(): Promise<SUPPORTED_DEVICE_TYPES>;
+    getBatteryInfo(): Promise<any>;
 }
 
 export declare const Quantum: QuantumOriginal;
