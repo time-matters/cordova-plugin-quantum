@@ -32,8 +32,8 @@ var Quantum = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Quantum.prototype.setDeveloperKey = function (key) { return core.cordova(this, "setDeveloperKey", {}, arguments); };
-    Quantum.prototype.connect = function () { return core.cordova(this, "connect", {}, arguments); };
-    Quantum.prototype.disconnect = function () { return core.cordova(this, "disconnect", {}, arguments); };
+    Quantum.prototype.connect = function () { return core.cordova(this, "connect", { "sync": true }, arguments); };
+    Quantum.prototype.disconnect = function () { return core.cordova(this, "disconnect", { "sync": true }, arguments); };
     Quantum.prototype.sdkVersion = function () { return core.cordova(this, "sdkVersion", {}, arguments); };
     Quantum.prototype.connectionState = function () { return core.cordova(this, "connectionState", { "observable": true }, arguments); };
     Quantum.prototype.barcodeData = function () { return core.cordova(this, "barcodeData", {}, arguments); };

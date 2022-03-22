@@ -39,10 +39,10 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   @Cordova()
   setDeveloperKey(key: string): void { }
 
-  @Cordova()
+  @Cordova({ sync: true })
   connect(): void { }
 
-  @Cordova()
+  @Cordova({ sync: true })
   disconnect(): void { }
 
   @Cordova()

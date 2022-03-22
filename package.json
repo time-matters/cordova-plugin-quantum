@@ -1,6 +1,6 @@
 {
   "name": "@awesome-cordova-plugins/quantum",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Ionic wrapper for the QuantumSDK-Cordova plugin",
   "main": "index.js",
   "keywords": [
