@@ -71,6 +71,11 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   }
 
   @Cordova()
+  getPassThroughSync(): Promise<any> {
+    return;
+  }
+
+  @Cordova()
   setPassThroughSync(value: boolean): Promise<any> {
     return;
   }
