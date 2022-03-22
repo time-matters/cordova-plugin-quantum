@@ -51,9 +51,7 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   }
 
   @Cordova()
-  connectionState(): Promise<any> {
-    return;
-  }
+  connectionState(): void { }
 
   @Cordova({ observable: true })
   barcodeData(): Observable<BarcodeData> {

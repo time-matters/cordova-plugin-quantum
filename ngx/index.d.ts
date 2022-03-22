@@ -26,7 +26,7 @@ export declare class Quantum extends AwesomeCordovaNativePlugin {
     connect(): void;
     disconnect(): void;
     sdkVersion(): Promise<string>;
-    connectionState(): Promise<any>;
+    connectionState(): void;
     barcodeData(): Observable<BarcodeData>;
     playSound(beepData: number[]): void;
 }
