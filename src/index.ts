@@ -33,7 +33,7 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   disconnect(): void { }
 
   @Cordova()
-  connectionState(): Promise<any> {
+  connectionState(): any {
     return;
   }
 
