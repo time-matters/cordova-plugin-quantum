@@ -16,9 +16,8 @@ export interface BarcodeData {
 @Plugin({
   pluginName: 'Quantum',
   plugin: 'cordova-plugin-quantumsdk',
-  pluginRef: 'Quantum',
+  pluginRef: 'cordova.plugins.QuantumSDKCordova',
   repo: 'https://github.com/time-matters/QuantumSDK-Cordova.git',
-  install: 'ionic cordova plugin add cordova-plugin-quantumsdk',
   platforms: ['iOS'],
 })
 @Injectable()
@@ -32,10 +31,8 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   @Cordova({ sync: true })
   disconnect(): void { }
 
-  @Cordova()
-  connectionState(fn: any): any {
-    return;
-  }
+  @Cordova({ sync: true })
+  connectionState(fn: Function): void { }
 
   @Cordova({ observable: true })
   barcodeData(): Observable<BarcodeData> {

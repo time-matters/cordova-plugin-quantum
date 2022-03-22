@@ -21,14 +21,13 @@ var Quantum = /** @class */ (function (_super) {
     Quantum.prototype.setDeveloperKey = function (key) { return core.cordova(this, "setDeveloperKey", {}, arguments); };
     Quantum.prototype.connect = function () { return core.cordova(this, "connect", { "sync": true }, arguments); };
     Quantum.prototype.disconnect = function () { return core.cordova(this, "disconnect", { "sync": true }, arguments); };
-    Quantum.prototype.connectionState = function (fn) { return core.cordova(this, "connectionState", {}, arguments); };
+    Quantum.prototype.connectionState = function (fn) { return core.cordova(this, "connectionState", { "sync": true }, arguments); };
     Quantum.prototype.barcodeData = function () { return core.cordova(this, "barcodeData", { "observable": true }, arguments); };
     Quantum.prototype.playSound = function (beepData) { return core.cordova(this, "playSound", {}, arguments); };
     Quantum.pluginName = "Quantum";
     Quantum.plugin = "cordova-plugin-quantumsdk";
-    Quantum.pluginRef = "Quantum";
+    Quantum.pluginRef = "cordova.plugins.QuantumSDKCordova";
     Quantum.repo = "https://github.com/time-matters/QuantumSDK-Cordova.git";
-    Quantum.install = "ionic cordova plugin add cordova-plugin-quantumsdk";
     Quantum.platforms = ["iOS"];
     Quantum.decorators = [
         { type: core$1.Injectable }
