@@ -23,7 +23,7 @@ export interface BarcodeData {
 }
 export declare class QuantumOriginal extends AwesomeCordovaNativePlugin {
     setDeveloperKey(key: string): void;
-    connect(): Promise<any>;
+    connect(): void;
     disconnect(): void;
     sdkVersion(): Promise<string>;
     connectionState(): Observable<any>;
