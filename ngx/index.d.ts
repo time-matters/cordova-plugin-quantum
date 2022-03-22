@@ -1,5 +1,5 @@
 import { AwesomeCordovaNativePlugin } from '@awesome-cordova-plugins/core';
-export declare enum CONN_STATES {
+export declare enum CONNECTION_STATES {
     CONN_DISCONNECTED = 0,
     CONN_CONNECTING = 1,
     CONN_CONNECTED = 2
@@ -25,7 +25,7 @@ export declare class Quantum extends AwesomeCordovaNativePlugin {
     connect(): void;
     disconnect(): void;
     sdkVersion(): Promise<string>;
-    connectionState(): Promise<CONN_STATES>;
+    connectionState(): Promise<any>;
     barcodeData(): Promise<BarcodeData>;
     playSound(beepData: number[]): Promise<any>;
     getConnectedDeviceInfo(): Promise<SUPPORTED_DEVICE_TYPES>;

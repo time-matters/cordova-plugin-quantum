@@ -1,7 +1,7 @@
 import { Cordova, AwesomeCordovaNativePlugin, Plugin } from '@awesome-cordova-plugins/core';
 import { Injectable } from '@angular/core';
 
-export enum CONN_STATES {
+export enum CONNECTION_STATES {
   CONN_DISCONNECTED = 0,
   CONN_CONNECTING = 1,
   CONN_CONNECTED = 2
@@ -50,7 +50,7 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   }
 
   @Cordova()
-  connectionState(): Promise<CONN_STATES> {
+  connectionState(): Promise<any> {
     return;
   }
 
