@@ -66,7 +66,12 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   }
 
   @Cordova()
-  getConnectedDeviceInfo(): Promise<SUPPORTED_DEVICE_TYPES> {
+  getConnectedDeviceInfo(): Promise<any> {
+    return;
+  }
+
+  @Cordova()
+  setPassThroughSync(value: boolean): Promise<any> {
     return;
   }
 

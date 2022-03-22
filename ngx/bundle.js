@@ -39,6 +39,7 @@ var Quantum = /** @class */ (function (_super) {
     Quantum.prototype.barcodeData = function () { return core.cordova(this, "barcodeData", {}, arguments); };
     Quantum.prototype.playSound = function (beepData) { return core.cordova(this, "playSound", {}, arguments); };
     Quantum.prototype.getConnectedDeviceInfo = function () { return core.cordova(this, "getConnectedDeviceInfo", {}, arguments); };
+    Quantum.prototype.setPassThroughSync = function (value) { return core.cordova(this, "setPassThroughSync", {}, arguments); };
     Quantum.prototype.getBatteryInfo = function () { return core.cordova(this, "getBatteryInfo", {}, arguments); };
     Quantum.pluginName = "Quantum";
     Quantum.plugin = "cordova-plugin-quantumsdk";
