@@ -1,4 +1,4 @@
-import { Cordova, AwesomeCordovaNativePlugin, Plugin } from '@awesome-cordova-plugins/core';
+import { Cordova, CordovaInstance, AwesomeCordovaNativePlugin, Plugin } from '@awesome-cordova-plugins/core';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -39,8 +39,10 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   @Cordova()
   setDeveloperKey(key: string): void { }
 
-  @Cordova({ sync: true })
-  connect(): void { }
+  @CordovaInstance()
+  connect(): Promise<any> {
+    return;
+  }
 
   @Cordova({ sync: true })
   disconnect(): void { }
