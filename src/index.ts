@@ -1,4 +1,4 @@
-import { Cordova, CordovaInstance, AwesomeCordovaNativePlugin, Plugin } from '@awesome-cordova-plugins/core';
+import { Cordova, CordovaFunctionOverride, AwesomeCordovaNativePlugin, Plugin } from '@awesome-cordova-plugins/core';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -31,8 +31,8 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   @Cordova({ sync: true })
   disconnect(): void { }
 
-  @Cordova({ sync: true })
-  connectionState(): void { }
+  @CordovaFunctionOverride()
+  connectionState(): Observable<any> { return; }
 
   @Cordova({ observable: true })
   barcodeData(): Observable<BarcodeData> {
