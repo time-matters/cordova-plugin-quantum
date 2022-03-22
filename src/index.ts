@@ -16,7 +16,7 @@ export interface BarcodeData {
 @Plugin({
   pluginName: 'Quantum',
   plugin: 'cordova-plugin-quantumsdk',
-  pluginRef: 'cordova.plugins.QuantumSDKCordova',
+  pluginRef: 'Quantum',
   repo: 'https://github.com/time-matters/QuantumSDK-Cordova.git',
   platforms: ['iOS'],
 })
@@ -32,7 +32,7 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   disconnect(): void { }
 
   @Cordova({ sync: true })
-  connectionState(fn: Function): void { }
+  connectionState(): void { }
 
   @Cordova({ observable: true })
   barcodeData(): Observable<BarcodeData> {
