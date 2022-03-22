@@ -50,7 +50,7 @@ export class Quantum extends AwesomeCordovaNativePlugin {
     return;
   }
 
-  @Cordova({ callbackOrder: 'reverse', observable: true })
+  @Cordova({ observable: true })
   connectionState(): Observable<any> {
     return;
   }
@@ -80,8 +80,8 @@ export class Quantum extends AwesomeCordovaNativePlugin {
     return;
   }
 
-  @Cordova()
-  getBatteryInfo(): Promise<any> {
+  @Cordova({ observable: true })
+  getBatteryInfo(): Observable<any> {
     return;
   }
 }

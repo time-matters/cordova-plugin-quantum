@@ -32,5 +32,5 @@ export declare class Quantum extends AwesomeCordovaNativePlugin {
     getConnectedDeviceInfo(): Promise<any>;
     getPassThroughSync(): Promise<any>;
     setPassThroughSync(value: boolean): Promise<any>;
-    getBatteryInfo(): Promise<any>;
+    getBatteryInfo(): Observable<any>;
 }
