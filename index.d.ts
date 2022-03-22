@@ -26,13 +26,9 @@ export declare class QuantumOriginal extends AwesomeCordovaNativePlugin {
     connect(): void;
     disconnect(): void;
     sdkVersion(): Promise<string>;
-    connectionState(): Observable<any>;
-    barcodeData(): Promise<BarcodeData>;
-    playSound(beepData: number[]): Promise<any>;
-    getConnectedDeviceInfo(): Promise<any>;
-    getPassThroughSync(): Promise<any>;
-    setPassThroughSync(value: boolean): Promise<any>;
-    getBatteryInfo(): Observable<any>;
+    connectionState(): Promise<any>;
+    barcodeData(): Observable<BarcodeData>;
+    playSound(beepData: number[]): void;
 }
 
 export declare const Quantum: QuantumOriginal;

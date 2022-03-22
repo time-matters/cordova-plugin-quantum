@@ -50,38 +50,16 @@ export class Quantum extends AwesomeCordovaNativePlugin {
     return;
   }
 
-  @Cordova({ observable: true })
-  connectionState(): Observable<any> {
-    return;
-  }
-
   @Cordova()
-  barcodeData(): Promise<BarcodeData> {
-    return;
-  }
-
-  @Cordova()
-  playSound(beepData: number[]): Promise<any> {
-    return;
-  }
-
-  @Cordova()
-  getConnectedDeviceInfo(): Promise<any> {
-    return;
-  }
-
-  @Cordova()
-  getPassThroughSync(): Promise<any> {
-    return;
-  }
-
-  @Cordova()
-  setPassThroughSync(value: boolean): Promise<any> {
+  connectionState(): Promise<any> {
     return;
   }
 
   @Cordova({ observable: true })
-  getBatteryInfo(): Observable<any> {
+  barcodeData(): Observable<BarcodeData> {
     return;
   }
+
+  @Cordova()
+  playSound(beepData: number[]): void { }
 }
