@@ -5,6 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var tslib = require('tslib');
 var core = require('@awesome-cordova-plugins/core');
 var core$1 = require('@angular/core');
+require('rxjs');
 
 exports.CONNECTION_STATES = void 0;
 (function (CONNECTION_STATES) {
@@ -34,7 +35,7 @@ var Quantum = /** @class */ (function (_super) {
     Quantum.prototype.connect = function () { return core.cordova(this, "connect", {}, arguments); };
     Quantum.prototype.disconnect = function () { return core.cordova(this, "disconnect", {}, arguments); };
     Quantum.prototype.sdkVersion = function () { return core.cordova(this, "sdkVersion", {}, arguments); };
-    Quantum.prototype.connectionState = function () { return core.cordova(this, "connectionState", {}, arguments); };
+    Quantum.prototype.connectionState = function () { return core.cordova(this, "connectionState", { "observable": true }, arguments); };
     Quantum.prototype.barcodeData = function () { return core.cordova(this, "barcodeData", {}, arguments); };
     Quantum.prototype.playSound = function (beepData) { return core.cordova(this, "playSound", {}, arguments); };
     Quantum.prototype.getConnectedDeviceInfo = function () { return core.cordova(this, "getConnectedDeviceInfo", {}, arguments); };

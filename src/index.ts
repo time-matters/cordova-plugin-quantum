@@ -1,5 +1,6 @@
 import { Cordova, AwesomeCordovaNativePlugin, Plugin } from '@awesome-cordova-plugins/core';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 export enum CONNECTION_STATES {
   CONN_DISCONNECTED = 0,
@@ -39,9 +40,7 @@ export class Quantum extends AwesomeCordovaNativePlugin {
   setDeveloperKey(key: string): void { }
 
   @Cordova()
-  connect(): Promise<any> {
-    return;
-  }
+  connect(): void { }
 
   @Cordova()
   disconnect(): void { }
@@ -51,8 +50,8 @@ export class Quantum extends AwesomeCordovaNativePlugin {
     return;
   }
 
-  @Cordova()
-  connectionState(): Promise<any> {
+  @Cordova({ observable: true })
+  connectionState(): Observable<any> {
     return;
   }
 
